@@ -30,24 +30,19 @@ const HeroWithChevron = ({
       {/* Teal Background for Content Area (Right 60%) */}
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] bg-primary z-0" />
 
-      {/* Chevron overlay: dual gold bands with teal gap (" >> ") */}
+      {/* Double Chevron: small teal then large gold */}
       <svg
         className="absolute top-0 bottom-0 hidden md:block z-10"
-        style={{ left: "36%", width: "28%" }}
+        style={{ left: "34%", width: "30%" }}
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        {/* Left gold wedge */}
-        <polygon points="0,0 65,0 85,50 65,100 0,100" fill="hsl(var(--accent))" />
-        {/* Teal gap wedge */}
-        <polygon points="65,0 72,0 92,50 72,100 65,100" fill="hsl(var(--primary))" />
-        {/* Right gold wedge */}
-        <polygon points="72,0 94,0 100,50 94,100 72,100" fill="hsl(var(--accent))" />
+        <polygon points="0,0 32,0 52,50 32,100 0,100" fill="hsl(var(--primary))" />
+        <polygon points="32,0 95,0 100,50 95,100 32,100" fill="hsl(var(--accent))" />
       </svg>
 
-      {/* Mobile: Full gold background with photo */}
-      <div className="absolute left-0 top-0 bottom-0 w-full bg-accent md:hidden z-0" />
+      {/* Mobile: keep clean layout; no extra overlays */}
 
       {/* Content Section (Right 60%) */}
       <div className="container mx-auto px-6 relative z-20">
