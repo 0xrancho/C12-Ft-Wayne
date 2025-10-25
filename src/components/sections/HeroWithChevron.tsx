@@ -30,22 +30,28 @@ const HeroWithChevron = ({
       {/* Teal Background for Content Area (Right 60%) */}
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] bg-primary z-0" />
 
-      {/* Gold Chevron ">" Divider - single direction angle */}
-      <div
-        className="absolute top-0 bottom-0 bg-accent z-10 hidden md:block"
-        style={{
-          left: "30%",
-          width: "20%",
-          clipPath: "polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%)",
-        }}
-      />
+      {/* Chevron overlay: dual gold bands with teal gap (" >> ") */}
+      <svg
+        className="absolute top-0 bottom-0 hidden md:block z-10"
+        style={{ left: "36%", width: "28%" }}
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        {/* Left gold wedge */}
+        <polygon points="0,0 65,0 85,50 65,100 0,100" fill="hsl(var(--accent))" />
+        {/* Teal gap wedge */}
+        <polygon points="65,0 72,0 92,50 72,100 65,100" fill="hsl(var(--primary))" />
+        {/* Right gold wedge */}
+        <polygon points="72,0 94,0 100,50 94,100 72,100" fill="hsl(var(--accent))" />
+      </svg>
 
       {/* Mobile: Full gold background with photo */}
       <div className="absolute left-0 top-0 bottom-0 w-full bg-accent md:hidden z-0" />
 
       {/* Content Section (Right 60%) */}
       <div className="container mx-auto px-6 relative z-20">
-        <div className="md:ml-[45%] md:pl-12 py-20">
+        <div className="md:ml-[56%] md:pl-12 py-20">
           <div className="max-w-2xl text-primary-foreground">
             <h1 className="mb-6">{title}</h1>
             {subtitle && <p className="text-2xl md:text-3xl font-heading mb-6">{subtitle}</p>}
