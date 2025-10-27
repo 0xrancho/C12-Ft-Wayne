@@ -1,6 +1,6 @@
 const SectionDivider = () => {
   return (
-    <div className="relative h-20">
+    <div className="relative h-20 my-16">
       <div
         className="absolute inset-0 bg-accent"
         style={{

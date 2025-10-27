@@ -70,34 +70,34 @@ const Home = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-card/10 border-accent/20 p-8 text-center backdrop-blur">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/20 flex items-center justify-center">
+            <Card className="group bg-card/10 border-accent/20 p-8 text-center backdrop-blur hover:bg-accent/20 transition-all duration-300 cursor-pointer h-64 flex flex-col items-center justify-center relative overflow-hidden">
+              <div className="w-16 h-16 mb-4 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Scale className="text-accent" size={32} />
               </div>
-              <h3 className="text-2xl mb-4 text-primary-foreground">Proven Practices</h3>
-              <p className="text-primary-foreground/90">
+              <h3 className="text-2xl text-primary-foreground">Proven Practices</h3>
+              <p className="text-primary-foreground/90 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
                 Monthly facilitated curriculum centered on the five points of business alignment: Ministry,
                 Revenue, Finances, Operations, and People.
               </p>
             </Card>
 
-            <Card className="bg-card/10 border-accent/20 p-8 text-center backdrop-blur">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/20 flex items-center justify-center">
+            <Card className="group bg-card/10 border-accent/20 p-8 text-center backdrop-blur hover:bg-accent/20 transition-all duration-300 cursor-pointer h-64 flex flex-col items-center justify-center relative overflow-hidden">
+              <div className="w-16 h-16 mb-4 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Handshake className="text-accent" size={32} />
               </div>
-              <h3 className="text-2xl mb-4 text-primary-foreground">Prudent Counsel</h3>
-              <p className="text-primary-foreground/90">
+              <h3 className="text-2xl text-primary-foreground">Prudent Counsel</h3>
+              <p className="text-primary-foreground/90 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
                 Unbiased counsel from non-competing peers in a confidential, facilitated forum with
                 personalized business coaching to promote accountability.
               </p>
             </Card>
 
-            <Card className="bg-card/10 border-accent/20 p-8 text-center backdrop-blur">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/20 flex items-center justify-center">
+            <Card className="group bg-card/10 border-accent/20 p-8 text-center backdrop-blur hover:bg-accent/20 transition-all duration-300 cursor-pointer h-64 flex flex-col items-center justify-center relative overflow-hidden">
+              <div className="w-16 h-16 mb-4 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Target className="text-accent" size={32} />
               </div>
-              <h3 className="text-2xl mb-4 text-primary-foreground">Purposed Action</h3>
-              <p className="text-primary-foreground/90">
+              <h3 className="text-2xl text-primary-foreground">Purposed Action</h3>
+              <p className="text-primary-foreground/90 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
                 The C12 Experience offers an annual business review and monthly action-oriented sessions that
                 foster personal, spiritual, and professional transformation.
               </p>
@@ -111,28 +111,28 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <h2 className="text-center mb-16">Member Outcomes</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <div className="text-center">
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow duration-300 border-2 border-accent/20 bg-background">
               <div className="text-6xl font-heading font-bold text-accent mb-4">93%</div>
               <p className="text-xl">of CEOs say they have grown as leaders</p>
-            </div>
-            <div className="text-center">
+            </Card>
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow duration-300 border-2 border-accent/20 bg-background">
               <div className="text-6xl font-heading font-bold text-accent mb-4">94%</div>
               <p className="text-xl">report better understanding their purpose as a leader</p>
-            </div>
-            <div className="text-center">
+            </Card>
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow duration-300 border-2 border-accent/20 bg-background">
               <div className="text-6xl font-heading font-bold text-accent mb-4">98%</div>
               <p className="text-xl">have implemented at least one idea that improved their business</p>
-            </div>
+            </Card>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow duration-300 border-2 border-accent/20 bg-background">
               <div className="text-6xl font-heading font-bold text-accent mb-4">75%</div>
               <p className="text-xl">say their work/life balance has improved</p>
-            </div>
-            <div className="text-center">
+            </Card>
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow duration-300 border-2 border-accent/20 bg-background">
               <div className="text-6xl font-heading font-bold text-accent mb-4">82%</div>
               <p className="text-xl">have implemented ministry programs in their business</p>
-            </div>
+            </Card>
           </div>
           <p className="text-center text-2xl font-heading mt-12 max-w-3xl mx-auto">
             At C12, results matter—because what's good for the leader is great for the business.
