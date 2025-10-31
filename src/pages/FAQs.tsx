@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import prayerGroupImage from "@/assets/c12-prayer-group.jpeg";
+import forumsDiscussionImage from "@/assets/c12-forums-discussion.png";
 
 const FAQs = () => {
   const faqSections = [
@@ -182,6 +183,7 @@ const FAQs = () => {
       {faqSections.map((section, sectionIndex) => {
         const isEven = sectionIndex % 2 === 0;
         const showBenefitsBackground = section.title === "Benefits";
+        const showKeyPlayersBackground = section.title === "Key Players";
 
         return (
           <div key={sectionIndex}>
@@ -191,11 +193,20 @@ const FAQs = () => {
                 isEven ? "bg-background" : "bg-accent"
               }`}
             >
-              {/* Background image for Benefits section */}
+              {/* Background images */}
               {showBenefitsBackground && (
                 <div className="absolute inset-0 opacity-10">
                   <img
                     src={prayerGroupImage}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              {showKeyPlayersBackground && (
+                <div className="absolute inset-0 opacity-10">
+                  <img
+                    src={forumsDiscussionImage}
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -235,9 +246,11 @@ const FAQs = () => {
                     isEven ? "bg-accent" : "bg-background"
                   }`}
                   style={{
-                    clipPath: sectionIndex % 2 === 0 
-                      ? "polygon(0 0, 100% 100%, 0 100%)"  // Slope down-right
-                      : "polygon(0 100%, 100% 0, 100% 100%)", // Slope down-left
+                    clipPath: sectionIndex === 3
+                      ? "polygon(0 100%, 100% 0, 0 0)"  // Key Players: slope up-right
+                      : sectionIndex % 2 === 0 
+                        ? "polygon(0 0, 100% 100%, 0 100%)"  // Slope down-right
+                        : "polygon(0 100%, 100% 0, 100% 100%)", // Slope down-left
                   }}
                 />
               </div>
