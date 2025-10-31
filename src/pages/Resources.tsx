@@ -12,7 +12,9 @@ import {
 } from "@/components/ui/dialog";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { useToast } from "@/hooks/use-toast";
-import { FileText } from "lucide-react";
+import strategicPlanningGuide from "@/assets/strategic-planning-guide.webp";
+import survivalToSustainability from "@/assets/survival-to-sustainability.webp";
+import customerLoyaltyReferrals from "@/assets/customer-loyalty-referrals.png";
 
 const Resources = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,16 +40,19 @@ const Resources = () => {
       title: "C12's Strategic Planning Guide",
       description:
         "A comprehensive framework for aligning your business strategy with Kingdom purpose.",
+      image: strategicPlanningGuide,
     },
     {
       title: "From Survival to Sustainability",
       description:
         "Practical steps to move your business from reactive management to proactive growth.",
+      image: survivalToSustainability,
     },
     {
       title: "Customer Loyalty & Referrals",
       description:
         "Proven strategies for building lasting customer relationships that drive organic growth.",
+      image: customerLoyaltyReferrals,
     },
   ];
 
@@ -65,8 +70,12 @@ const Resources = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {resources.map((resource, index) => (
               <Card key={index} className="overflow-hidden flex flex-col">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <FileText className="text-accent" size={80} />
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={resource.image} 
+                    alt={resource.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-8 flex-1 flex flex-col">
                   <h3 className="text-2xl mb-4">{resource.title}</h3>
