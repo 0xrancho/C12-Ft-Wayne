@@ -71,7 +71,7 @@ const Resources = () => {
       <div className="relative h-32 bg-accent" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }} />
 
       {/* Resources Section */}
-      <section className="bg-accent py-16">
+      <section className="relative bg-accent py-16">
         <div className="container mx-auto px-6 max-w-6xl space-y-12">
           {resources.map((resource, index) => (
             <Card key={index} className="bg-primary text-primary-foreground border-0 rounded-xl overflow-hidden">
@@ -99,10 +99,9 @@ const Resources = () => {
             </Card>
           ))}
         </div>
+        <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-background z-10" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }} />
       </section>
 
-      {/* Bottom Diagonal Separator - slopes up to the right */}
-      <div className="relative h-32 bg-background" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }} />
 
       {/* CTA Section */}
       <section className="bg-background py-20">
