@@ -10,7 +10,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { useToast } from "@/hooks/use-toast";
 import strategicPlanningGuide from "@/assets/strategic-planning-guide.webp";
 import survivalToSustainability from "@/assets/survival-to-sustainability.webp";
@@ -58,38 +57,47 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <HeroWithChevron
-        title="Free Resources for Christian Leaders"
-        subtitle="Equip yourself with practical tools and biblical wisdom for marketplace leadership."
-      />
+      {/* Hero Section */}
+      <section className="bg-background pt-32 pb-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h1 className="mb-6 text-primary">RESOURCES</h1>
+          <p className="text-xl text-foreground">
+            Take a look at a few of our top resources. Members gain access to a wide range of topical executive curriculum, case studies, videos, ebooks, leadership tools, seminars, and workshops, all in alignment and support to the C12 BaaM (Business-as-a-Ministry) Framework.
+          </p>
+        </div>
+      </section>
 
-      {/* Resources Grid */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (
-              <Card key={index} className="overflow-hidden flex flex-col p-0 border-0 shadow-lg">
-                <img 
-                  src={resource.image} 
-                  alt={resource.title}
-                  className="w-full aspect-[4/3] object-cover rounded-t-lg"
-                />
-                <div className="p-8 flex-1 flex flex-col">
-                  <h3 className="text-2xl mb-4">{resource.title}</h3>
-                  <p className="mb-6 flex-1">{resource.description}</p>
+      {/* Diagonal Separator */}
+      <div className="relative h-32 bg-accent" style={{ clipPath: 'polygon(0 50%, 100% 0, 100% 100%, 0 100%)' }} />
+
+      {/* Resources Section */}
+      <section className="bg-accent py-16">
+        <div className="container mx-auto px-6 max-w-6xl space-y-12">
+          {resources.map((resource, index) => (
+            <Card key={index} className="bg-primary text-primary-foreground border-0 rounded-xl overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0 items-center">
+                <div className="p-12 order-2 md:order-1">
+                  <h3 className="mb-6">{resource.title}</h3>
+                  <p className="text-lg mb-8 leading-relaxed">{resource.description}</p>
                   <Button
                     variant="default"
-                    size="lg"
+                    size="xl"
                     onClick={() => handleDownloadClick(resource.title)}
-                    className="w-full"
+                    className="bg-accent text-accent-foreground hover:bg-accent/90"
                   >
                     Download Now
                   </Button>
                 </div>
-              </Card>
-            ))}
-          </div>
+                <div className="order-1 md:order-2">
+                  <img 
+                    src={resource.image} 
+                    alt={resource.title}
+                    className="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
+                  />
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </section>
 
