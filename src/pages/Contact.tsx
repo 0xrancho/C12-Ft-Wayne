@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/select";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { useToast } from "@/hooks/use-toast";
-import indyMap from "@/assets/indy-map.png";
+import indyMap from "@/assets/contact-Indiana3.png";
+import contactBanner from "@/assets/Contact-banner.png";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,6 +38,7 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <HeroWithChevron
+        backgroundImage={contactBanner}
         title="Get In Touch"
         subtitle="Let's embark on this journey together!"
       />
@@ -53,10 +55,10 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Map Image */}
               <div className="hidden md:flex">
-                <img 
-                  src={indyMap} 
-                  alt="C12 Indiana service area map" 
-                  className="w-full object-cover rounded-lg shadow-lg"
+                <img
+                  src={indyMap}
+                  alt="C12 Indiana service area map"
+                  className="w-full object-cover rounded-tl-[2rem]"
                 />
               </div>
 

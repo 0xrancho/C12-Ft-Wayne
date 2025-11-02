@@ -9,6 +9,7 @@ import {
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import prayerGroupImage from "@/assets/c12-prayer-group.jpeg";
 import forumsDiscussionImage from "@/assets/c12-forums-discussion.png";
+import faqBanner from "@/assets/FAQ-banner.png";
 
 const FAQs = () => {
   const faqSections = [
@@ -175,6 +176,7 @@ const FAQs = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <HeroWithChevron
+        backgroundImage={faqBanner}
         title="Frequently Asked Questions"
         subtitle="Clarity builds confidence."
       />
@@ -228,7 +230,7 @@ const FAQs = () => {
                             {item.q}
                           </span>
                         </AccordionTrigger>
-                        <AccordionContent className="text-lg pb-6 text-muted-foreground">
+                        <AccordionContent className="text-xl pb-6 text-foreground">
                           {item.a}
                         </AccordionContent>
                       </AccordionItem>

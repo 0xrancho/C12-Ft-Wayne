@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import heroBanner from "@/assets/hero-banner-screencap.png";
+import heroBanner from "@/assets/hero-banner5.png";
 
 interface HeroWithChevronProps {
   backgroundImage?: string;
@@ -18,12 +18,14 @@ const HeroWithChevron = ({
   children,
   className = "",
 }: HeroWithChevronProps) => {
+  const bgImage = backgroundImage || heroBanner;
+
   return (
-    <section className={`relative min-h-[600px] flex items-center overflow-hidden ${className}`}>
+    <section className={`relative min-h-[600px] flex items-center overflow-visible ${className}`}>
       {/* Full Banner Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: `url(${heroBanner})` }}
+        style={{ backgroundImage: `url(${bgImage})` }}
       />
 
       {/* Content Section - positioned in teal area on right */}
@@ -36,6 +38,13 @@ const HeroWithChevron = ({
             {children && <div className="flex flex-wrap gap-4">{children}</div>}
           </div>
         </div>
+      </div>
+
+      {/* Triangle hanging off bottom of banner - overlaps slightly for seamless connection */}
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[38px] z-20">
+        <div
+          className="w-0 h-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-t-[40px] border-t-primary"
+        />
       </div>
     </section>
   );

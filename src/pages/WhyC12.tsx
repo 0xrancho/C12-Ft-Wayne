@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { CheckCircle2 } from "lucide-react";
-import indySkyline from "@/assets/indy-skyline.png";
+import whyc12Banner from "@/assets/Whyc12-banner.png";
+import c12Logo from "@/assets/C12_7.png";
+import kellyHeadshot from "@/assets/kelly-principal.jpeg";
 import {
   Accordion,
   AccordionContent,
@@ -17,7 +19,7 @@ const WhyC12 = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <HeroWithChevron
-        backgroundImage={indySkyline}
+        backgroundImage={whyc12Banner}
         title="Why C12 Indianapolis?"
         subtitle="Great Businesses. Greater Purpose."
         description={
@@ -109,7 +111,7 @@ const WhyC12 = () => {
                       <h3 className="text-2xl text-accent text-left">{item.title}</h3>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-8 pb-6">
+                  <AccordionContent className="px-2 pb-2">
                     <div className="bg-background rounded-lg p-6 text-secondary">
                       <p>{item.description}</p>
                     </div>
@@ -137,7 +139,7 @@ const WhyC12 = () => {
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Exclusive Peer Advisory</span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-6 pb-4 text-lg">
                     Engage in candid, faith-based discussions with peers who understand the unique challenges of integrating faith and business.
                   </AccordionContent>
                 </AccordionItem>
@@ -146,7 +148,7 @@ const WhyC12 = () => {
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Action-Oriented Learning</span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-6 pb-4 text-lg">
                     Leave every meeting with concrete steps to improve both your business operations and personal life.
                   </AccordionContent>
                 </AccordionItem>
@@ -155,7 +157,7 @@ const WhyC12 = () => {
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Focus 60 Meetings</span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-6 pb-4 text-lg">
                     Between each monthly forum, receive monthly 1:1 mentorship and coaching from our Principal Chair to help walk you through the processes of owning a business.
                   </AccordionContent>
                 </AccordionItem>
@@ -164,7 +166,7 @@ const WhyC12 = () => {
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Community and Support</span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-6 pb-4 text-lg">
                     Connect with a diverse group of Christian leaders who are committed to helping each other succeed.
                   </AccordionContent>
                 </AccordionItem>
@@ -173,7 +175,7 @@ const WhyC12 = () => {
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Personal and Professional</span>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
+                  <AccordionContent className="px-6 pb-4 text-lg">
                     From actionable business insights to spiritual enrichment, our members experience comprehensive growth.
                   </AccordionContent>
                 </AccordionItem>
@@ -225,12 +227,26 @@ const WhyC12 = () => {
             CEOs thrive:
           </p>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-12 text-center">
-              <p className="text-xl text-muted-foreground italic">
-                [Insert team headshots and bios - content TBD from client]
-              </p>
-            </Card>
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="flex flex-col items-center">
+              {/* Circular headshot with thin yellow border */}
+              <div className="w-48 h-48 rounded-full p-0.5 bg-accent mb-6">
+                <img
+                  src={kellyHeadshot}
+                  alt="Kelly Schwedland"
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+
+              {/* Name and title */}
+              <h3 className="text-3xl mb-2">Kelly Schwedland</h3>
+              <p className="text-xl text-muted-foreground mb-8">Principal Chair</p>
+
+              {/* Connect button */}
+              <Link to="/contact">
+                <Button size="xl">Connect with the Principal Chair</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -239,6 +255,9 @@ const WhyC12 = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center mb-8">
+              <img src={c12Logo} alt="C12 Logo" className="h-24 w-auto" />
+            </div>
             <h2 className="mb-8">Your Next Chapter Starts Here</h2>
             <p className="text-xl mb-10 opacity-95">
               Interested? Schedule a discovery call with one of our Chairs, and see if you meet membership
