@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -118,13 +119,15 @@ const Resources = () => {
             <p className="text-xl mb-8 leading-relaxed">
               Join a community of Christian business leaders committed to building businesses that honor God and serve others.
             </p>
-            <Button
-              variant="default"
-              size="xl"
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
-            >
-              Learn More About Membership
-            </Button>
+            <Link to="/contact">
+              <Button
+                variant="default"
+                size="xl"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                Learn More About Membership
+              </Button>
+            </Link>
             </Card>
           </div>
         </div>
