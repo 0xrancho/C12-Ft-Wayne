@@ -177,7 +177,7 @@ const FAQs = () => {
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={faqBanner}
-        title="Frequently Asked Questions"
+        title="FAQ"
         subtitle="Clarity builds confidence."
       />
 
@@ -191,7 +191,7 @@ const FAQs = () => {
           <div key={sectionIndex}>
             {/* FAQ Section */}
             <section
-              className={`py-20 relative ${
+              className={`py-20 relative ${sectionIndex === 0 ? 'md:pt-20 pt-8' : ''} ${
                 isEven ? "bg-background" : "bg-accent"
               }`}
             >

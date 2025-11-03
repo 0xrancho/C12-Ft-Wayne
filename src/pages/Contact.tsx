@@ -44,7 +44,7 @@ const Contact = () => {
       />
 
       {/* Form Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 md:py-20 pt-8 bg-muted">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <p className="text-center text-xl mb-12">
