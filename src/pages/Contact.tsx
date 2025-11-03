@@ -63,7 +63,7 @@ const Contact = () => {
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg shadow-lg flex flex-col">
+              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-4 md:p-8 rounded-lg shadow-lg flex flex-col">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName">First Name *</Label>
@@ -111,7 +111,7 @@ const Contact = () => {
               <div>
                 <Label htmlFor="experience">
                   How many years have you been stewarding the business as
-                  Owner/Founder/CEO/President/General Manager? *
+                  Owner/Founder/CEO/President/ General Manager? *
                 </Label>
                 <Select required>
                   <SelectTrigger id="experience">
