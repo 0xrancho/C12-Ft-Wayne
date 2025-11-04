@@ -109,7 +109,7 @@ const Home = () => {
       </section>
 
       {/* Experience Summary Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary bg-grid-overlay text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Proven Practices Card */}
@@ -312,7 +312,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA Block */}
-      <section className="relative py-32 bg-primary text-primary-foreground overflow-hidden">
+      <section className="relative py-32 bg-primary bg-grid-overlay text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary" />
         </div>

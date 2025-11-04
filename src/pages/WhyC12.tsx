@@ -155,7 +155,7 @@ const WhyC12 = () => {
       </section>
 
       {/* Impact and Benefits */}
-      <section className="py-20 bg-secondary relative">
+      <section className="py-20 bg-secondary bg-grid-overlay relative">
         {/* Top slope triangle - white overlapping */}
         <div className="absolute top-0 left-0 right-0 h-20 bg-background pointer-events-none" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 0)" }} />
         
@@ -348,7 +348,7 @@ const WhyC12 = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary bg-grid-overlay text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-8">

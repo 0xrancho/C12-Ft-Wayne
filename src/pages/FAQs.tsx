@@ -192,7 +192,7 @@ const FAQs = () => {
             {/* FAQ Section */}
             <section
               className={`py-20 relative ${sectionIndex === 0 ? 'md:pt-20 pt-0' : ''} ${
-                isEven ? "bg-background" : "bg-accent"
+                isEven ? "bg-background" : "bg-accent bg-grid-overlay"
               }`}
             >
               {/* Background images */}

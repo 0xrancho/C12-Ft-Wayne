@@ -22,16 +22,46 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = {
+        firstName: formData.get('firstName'),
+        lastName: formData.get('lastName'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        organization: formData.get('organization'),
+        industry: formData.get('industry'),
+        experience: formData.get('experience'),
+      };
 
-    toast({
-      title: "Thank you!",
-      description: "We'll reach out within one business day.",
-    });
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
+      toast({
+        title: "Thank you!",
+        description: "We'll reach out within one business day.",
+      });
+
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -44,7 +74,7 @@ const Contact = () => {
       />
 
       {/* Form Section */}
-      <section className="py-20 md:py-20 pt-8 bg-muted">
+      <section className="py-20 md:py-20 pt-8 bg-muted bg-grid-overlay">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <p className="text-center text-xl mb-12">
@@ -67,53 +97,54 @@ const Contact = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" required />
+                  <Input id="firstName" name="firstName" required />
                 </div>
                 <div>
                   <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" required />
+                  <Input id="lastName" name="lastName" required />
                 </div>
               </div>
 
               <div>
                 <Label htmlFor="email">Email *</Label>
-                <Input id="email" type="email" required />
+                <Input id="email" name="email" type="email" required />
               </div>
 
               <div>
                 <Label htmlFor="phone">Phone *</Label>
-                <Input id="phone" type="tel" required />
+                <Input id="phone" name="phone" type="tel" required />
               </div>
 
               <div>
                 <Label htmlFor="organization">Organization *</Label>
-                <Input id="organization" required />
+                <Input id="organization" name="organization" required />
               </div>
 
               <div>
-                <Label htmlFor="orgSize">How many people are in your organization? *</Label>
-                <Select required>
-                  <SelectTrigger id="orgSize">
-                    <SelectValue placeholder="Select size" />
+                <Label htmlFor="industry">Industry *</Label>
+                <Select name="industry" required>
+                  <SelectTrigger id="industry">
+                    <SelectValue placeholder="Select industry" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="0-10">0-10</SelectItem>
-                    <SelectItem value="11-25">11-25</SelectItem>
-                    <SelectItem value="26-50">26-50</SelectItem>
-                    <SelectItem value="51-100">51-100</SelectItem>
-                    <SelectItem value="101-250">101-250</SelectItem>
-                    <SelectItem value="251-500">251-500</SelectItem>
-                    <SelectItem value="500+">500+</SelectItem>
+                    <SelectItem value="Technology">Technology</SelectItem>
+                    <SelectItem value="Healthcare">Healthcare</SelectItem>
+                    <SelectItem value="Finance">Finance</SelectItem>
+                    <SelectItem value="Manufacturing">Manufacturing</SelectItem>
+                    <SelectItem value="Construction">Construction</SelectItem>
+                    <SelectItem value="Retail">Retail</SelectItem>
+                    <SelectItem value="Professional Services">Professional Services</SelectItem>
+                    <SelectItem value="Real Estate">Real Estate</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <Label htmlFor="experience">
-                  How many years have you been stewarding the business as
-                  Owner/Founder/CEO/President/ General Manager? *
+                <Label htmlFor="experience" className="block">
+                  How many years have you been stewarding the business as Owner/Founder/CEO/President/General Manager? *
                 </Label>
-                <Select required>
+                <Select name="experience" required>
                   <SelectTrigger id="experience">
                     <SelectValue placeholder="Select experience" />
                   </SelectTrigger>
