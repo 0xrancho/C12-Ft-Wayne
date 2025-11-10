@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/c12-logo.png";
+import logo from "@/assets/C12_5.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,8 +34,9 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0 flex items-center gap-2">
             <img src={logo} alt="C12 Indianapolis" className="h-12" />
+            <span className="font-heading font-bold text-foreground text-xl">| Indy</span>
           </Link>
 
           {/* Desktop Navigation */}

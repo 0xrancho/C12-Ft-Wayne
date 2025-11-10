@@ -77,7 +77,7 @@ const ExecutiveBriefing = () => {
       {/* Hero */}
       <HeroWithChevron
         title="Executive Briefing"
-        subtitle="Explore a 2 Hour Executive Briefing to see if C12 is right for you."
+        subtitle="Explore an Executive Briefing to see if C12 is right for you."
       />
 
       {/* Stats Block */}

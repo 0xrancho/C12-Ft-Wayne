@@ -334,8 +334,10 @@ const Home = () => {
               </p>
             </div>
             <p className="text-xl mb-10 opacity-95">
-              You don't have to navigate business alone. Let's start a conversation about how C12 can equip
-              you to lead with clarity, conviction, and impact.
+              You don't have to navigate business alone.
+              <br />
+              <br />
+              Let's start a conversation about how C12 can equip you to lead with clarity, conviction, and impact.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact">

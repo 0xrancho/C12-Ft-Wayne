@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { useToast } from "@/hooks/use-toast";
-import indyMap from "@/assets/contact-Indiana3.png";
+import indyMap from "@/assets/Indy-Ftwayne-map.png";
 import contactBanner from "@/assets/Contact-banner.png";
 
 const Contact = () => {
