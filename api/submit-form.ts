@@ -167,7 +167,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       if (source === 'Contact Form' || source === 'Executive Briefing') {
         console.log('Sending confirmation email for:', source);
         try {
-          const logoUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://c12-indiana.vercel.app'}/og-image.png`;
+          const logoUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://c12-indiana.vercel.app'}/20230726-C12-TerritoryLogo-IndyandFortWaynePrimary-583X180.png`;
 
           const emailResult = await resend.emails.send({
             from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
