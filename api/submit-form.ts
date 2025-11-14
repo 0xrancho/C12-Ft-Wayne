@@ -28,7 +28,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       organization,
       industry,
       experience,
-      resourceDownloaded
+      resourceDownloaded,
+      source
     } = body;
 
     // Initialize Notion client
@@ -78,16 +79,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             name: experience || 'Not specified',
           },
         },
-        'Resource Downloaded': {
-          rich_text: [
-            {
-              text: {
-                content: resourceDownloaded || 'Contact Form Submission',
+        ...(resourceDownloaded ? {
+          'Resource Downloaded': {
+            rich_text: [
+              {
+                text: {
+                  content: resourceDownloaded,
+                },
               },
-            },
-          ],
+            ],
+          },
+        } : {}),
+        'Source': {
+          select: {
+            name: source || 'Unknown',
+          },
         },
-        'Date': {
+        'Date Submitted': {
           date: {
             start: new Date().toISOString(),
           },

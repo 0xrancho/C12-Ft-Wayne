@@ -40,6 +40,7 @@ const ExecutiveBriefing = () => {
         organization: formData.get('organization'),
         industry: formData.get('orgSize'), // Using orgSize field as industry placeholder
         experience: formData.get('experience'),
+        source: 'Executive Briefing',
       };
 
       const response = await fetch('/api/submit-form', {

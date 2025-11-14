@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navigation />
-      <main className="flex-1 pt-20 overflow-x-hidden">{children}</main>
+      <main className="flex-1 pt-24 overflow-x-hidden">{children}</main>
       <Footer />
       <div className="h-24 md:h-20 bg-primary"></div>
 

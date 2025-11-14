@@ -39,6 +39,7 @@ const Resources = () => {
         phone: formData.get('phone'),
         organization: formData.get('organization'),
         resourceDownloaded: selectedResource,
+        source: 'Resource Download',
       };
 
       const response = await fetch('/api/submit-form', {
