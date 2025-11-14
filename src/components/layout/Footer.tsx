@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm opacity-75">
-              © 2025 C12 Indy and Fort Wayne. All rights reserved.
+              © 2025 C12 Fort Wayne. All rights reserved.
             </p>
 
             <div className="flex items-center gap-6">

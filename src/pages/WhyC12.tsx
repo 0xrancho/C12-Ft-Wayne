@@ -22,7 +22,7 @@ const WhyC12 = () => {
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={whyc12Banner}
-        title="Why C12 Indianapolis?"
+        title="Why C12 Fort Wayne?"
         subtitle="Great Businesses. Greater Purpose."
         description={
           <>
@@ -33,7 +33,7 @@ const WhyC12 = () => {
               world.
             </p>
             <p>
-              At C12 Indianapolis, we bring together top business leaders in confidential peer advisory
+              At C12 Fort Wayne, we bring together top business leaders in confidential peer advisory
               forums—guided by experienced Chairs who provide one-on-one coaching and world-class business
               and spiritual development curriculum.
             </p>
@@ -63,7 +63,7 @@ const WhyC12 = () => {
         <div className="container mx-auto px-6">
           <h2 className="text-center mb-8">What Sets Us Apart</h2>
           <p className="text-center text-xl mb-16 max-w-4xl mx-auto">
-            While other CEO peer groups focus on performance or networking, C12 Indianapolis is built on
+            While other CEO peer groups focus on performance or networking, C12 Fort Wayne is built on
             purpose. Our model blends best-in-class business strategy with biblical truth—equipping you to
             lead with eternal perspective and tangible results.
           </p>
@@ -262,7 +262,7 @@ const WhyC12 = () => {
           <h2 className="text-center mb-8">Meet Our Executive Leadership</h2>
           <br />
           <p className="text-center text-xl mb-16 max-w-4xl mx-auto">
-            C12 Indy–Fort Wayne is led by a team of marketplace veterans passionate about helping Christian
+            C12 Fort Wayne is led by a team of marketplace veterans passionate about helping Christian
             CEOs thrive:
           </p>
 

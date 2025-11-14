@@ -30,11 +30,11 @@ const FAQs = () => {
         },
         {
           q: "Is C12 a local or national organization?",
-          a: "C12 is a national organization with chapters across the United States and internationally. C12 Indianapolis is part of this larger network.",
+          a: "C12 is a national organization with chapters across the United States and internationally. C12 Fort Wayne is part of this larger network.",
         },
         {
-          q: "How long has C12 operated in Indianapolis?",
-          a: "C12 Indianapolis has been serving Christian business leaders in the Indianapolis area for several years, building strong community and impact.",
+          q: "How long has C12 operated in Fort Wayne?",
+          a: "C12 Fort Wayne has been serving Christian business leaders in the Fort Wayne area for several years, building strong community and impact.",
         },
         {
           q: "What are the qualifications for membership?",

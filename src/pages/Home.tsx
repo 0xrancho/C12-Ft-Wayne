@@ -53,7 +53,7 @@ const Home = () => {
         subtitle="Join a community of Christian CEOs and Business Owners who lead with faith and excellence."
         description={
           <p>
-            C12 Indianapolis brings together business leaders who want to grow strong companies while
+            C12 Fort Wayne brings together business leaders who want to grow strong companies while
             pursuing a greater impact.
           </p>
         }

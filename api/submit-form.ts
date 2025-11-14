@@ -134,14 +134,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                 <h2 style="color: #003B4D;">Thank You for Your Interest in C12!</h2>
                 <p>Hi ${firstName},</p>
-                <p>Thank you for downloading "<strong>${resourceDownloaded}</strong>" from C12 Indianapolis.</p>
+                <p>Thank you for downloading "<strong>${resourceDownloaded}</strong>" from C12 Fort Wayne.</p>
                 <p>Your requested resource is attached to this email.</p>
                 <p>At C12, we bring together Christian CEOs and business owners in peer advisory groups to build great businesses for a greater purpose. If you'd like to learn more about how C12 can serve you and your business, we'd love to connect.</p>
                 <p>Best regards,<br/>
-                The C12 Indianapolis Team</p>
+                The C12 Fort Wayne Team</p>
                 <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 24px 0;" />
                 <p style="font-size: 12px; color: #6B7280;">
-                  C12 Indianapolis<br/>
+                  C12 Fort Wayne<br/>
                   <a href="https://c12-indiana.vercel.app" style="color: #D4AF69;">Visit our website</a>
                 </p>
               </div>
@@ -174,11 +174,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             to: email as string,
             subject: source === 'Executive Briefing'
               ? 'Thank You for Your Interest in C12 Executive Briefing'
-              : 'Thank You for Contacting C12 Indianapolis',
+              : 'Thank You for Contacting C12 Fort Wayne',
             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
                 <div style="text-align: center; margin-bottom: 30px;">
-                  <img src="${logoUrl}" alt="C12 Indianapolis and Fort Wayne" style="max-width: 300px; height: auto;" />
+                  <img src="${logoUrl}" alt="C12 Fort Wayne" style="max-width: 300px; height: auto;" />
                 </div>
 
                 <h2 style="color: #003B4D; margin-bottom: 20px;">Thank You for Your Interest in C12!</h2>
@@ -186,7 +186,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 <p style="font-size: 16px; line-height: 1.6; color: #333;">Hi ${firstName},</p>
 
                 <p style="font-size: 16px; line-height: 1.6; color: #333;">
-                  Thank you for reaching out to C12 Indianapolis${source === 'Executive Briefing' ? ' and expressing interest in our Executive Briefing' : ''}.
+                  Thank you for reaching out to C12 Fort Wayne${source === 'Executive Briefing' ? ' and expressing interest in our Executive Briefing' : ''}.
                   We're excited to connect with you!
                 </p>
 
@@ -210,14 +210,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
                 <p style="font-size: 16px; line-height: 1.6; color: #333;">
                   Best regards,<br/>
-                  <strong>The C12 Indianapolis Team</strong>
+                  <strong>The C12 Fort Wayne Team</strong>
                 </p>
 
                 <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 30px 0;" />
 
                 <div style="text-align: center;">
                   <p style="font-size: 12px; color: #6B7280; margin-bottom: 10px;">
-                    C12 Indianapolis and Fort Wayne
+                    C12 Fort Wayne
                   </p>
                   <p style="font-size: 12px; color: #6B7280;">
                     <a href="https://c12-indiana.vercel.app" style="color: #D4AF69; text-decoration: none;">Visit our website</a>

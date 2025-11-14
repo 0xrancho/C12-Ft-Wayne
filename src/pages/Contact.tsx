@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { useToast } from "@/hooks/use-toast";
-import indyMap from "@/assets/Indy-Ftwayne-map.png";
+import ftwayneMap from "@/assets/ftwayne-contact-map.png";
 import contactBanner from "@/assets/Contact-banner.png";
 
 const Contact = () => {
@@ -87,8 +87,8 @@ const Contact = () => {
               {/* Map Image */}
               <div className="hidden md:flex">
                 <img
-                  src={indyMap}
-                  alt="C12 Indiana service area map"
+                  src={ftwayneMap}
+                  alt="C12 Fort Wayne service area map"
                   className="w-full object-cover rounded-tl-[2rem]"
                 />
               </div>
