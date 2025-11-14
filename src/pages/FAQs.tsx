@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import {
   Accordion,
   AccordionContent,
@@ -39,6 +40,14 @@ const FAQs = () => {
         {
           q: "What are the qualifications for membership?",
           a: "Members must be CEOs, business owners, or senior executives with decision-making authority, profess faith in Jesus Christ, and be committed to personal and business growth through biblical principles.",
+        },
+        {
+          q: "How is C12 different from Vistage or EO?",
+          a: "Unlike Vistage or EO (Entrepreneurs' Organization), C12 integrates biblical principles into every aspect of business strategy and leadership. While other groups focus solely on business performance, C12 addresses both professional success and spiritual growth, helping leaders align their businesses with Kingdom purposes. Our curriculum, coaching, and peer discussions are all grounded in Scripture and designed to help you steward your business as a ministry platform.",
+        },
+        {
+          q: "How is C12 different from other CEO peer groups?",
+          a: "C12 uniquely combines world-class business curriculum with biblical leadership principles. We're not just adding a prayer to a business meeting—we're building a community where faith and business are fully integrated. Our members are committed Christians who want to honor God through their leadership, treat their businesses as ministry platforms, and pursue both profit and purpose. The result is transformation that impacts your business, your family, and your legacy.",
         },
       ],
     },
@@ -172,8 +181,17 @@ const FAQs = () => {
     },
   ];
 
+  // Flatten FAQ data for schema markup
+  const faqData = faqSections.flatMap(section =>
+    section.questions.map(q => ({
+      question: q.q,
+      answer: q.a
+    }))
+  );
+
   return (
     <div className="min-h-screen">
+      <SchemaMarkup type="faq" faqData={faqData} />
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={faqBanner}
