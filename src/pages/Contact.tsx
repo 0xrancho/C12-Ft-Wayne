@@ -89,7 +89,7 @@ const Contact = () => {
                 <img
                   src={ftwayneMap}
                   alt="C12 Fort Wayne service area map"
-                  className="w-full object-cover rounded-tl-[2rem]"
+                  className="w-full object-cover rounded-tl-[2rem] border-4 border-white shadow-lg"
                 />
               </div>
 
